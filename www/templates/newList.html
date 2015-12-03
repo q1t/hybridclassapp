@@ -1,0 +1,22 @@
+     <ion-view view-title="">
+        <ion-header-bar class="bar-stable">
+           <h1 class="title">Add list</h1>
+      <button class="button" ng-click="back()">
+        Back
+      </button>
+        </ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">title</span>
+              <input type="text" ng-model="nl.title">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive"
+              ng-click="newList(nl)">
+              Add
+            </button>
+          </div>
+        </ion-content>
+      </ion-view>

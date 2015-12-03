@@ -1,0 +1,29 @@
+<ion-view cache-view="false" view-title="Your watch lists">
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Lists</h1>
+      <a class="button button-assertive" ng-click="logout()">
+        Logout
+      </a>
+      <a class="button button-calm" href="#/lists/new">
+        New List
+      </a>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list show-delete="shouldShowDelete"
+          can-swipe="listCanSwipe">
+      <ion-item ng-repeat="list in lists" 
+        list="list"
+        href="#/lists/{{list.title}}" class="list-remove-animate">
+        {{ list.title }}
+        <ion-option-button class="button-assertive"
+          ng-click="delete(list)">
+          Delete
+        </ion-option-button>
+        <ion-option-button class="button-calm"
+          ng-click="edit(list)">
+          Edit 
+        </ion-option-button>
+      </ion-item>
+</ion-list>
+  </ion-content>
+</ion-view>

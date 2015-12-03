@@ -1,0 +1,26 @@
+     <ion-view view-title="Register a new account">
+        <ion-header-bar class="bar-stable">
+           <h1 class="title">Register a new account</h1>
+        </ion-header-bar>
+        <ion-content>
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Username</span>
+              <input type="text" ng-model="user.username">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Password</span>
+              <input type="password" ng-model="user.password">
+            </label>
+          </div>
+          <div class="padding">
+            <button class="button button-block button-positive"
+              ng-click="newUser(user)">
+              Register
+            </button>
+            <p class="text-center">
+              <a href="#/signin">Sign In</a>
+            </p>
+          </div>
+        </ion-content>
+      </ion-view>

@@ -1,4 +1,9 @@
 {
-  "name": "hybrapp_watchlist",
-  "app_id": ""
+    "name": "hybrapp_watchlist",
+        "app_id": "",
+        "gulpStartupTasks": [
+        "babel",
+        "sass",
+        "watch"
+        ],
 }
