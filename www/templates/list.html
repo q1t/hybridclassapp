@@ -10,7 +10,7 @@
       <ion-item ng-repeat="movie in movies" 
         movie="movie"
         class="list-remove-animate item item-thumbnail-left">
-        <img class="poster" ng-src="{{ movie.poster }}">
+        <img class="poster" ng-src="http://localhost:8888/proxy/{{ movie.poster }}">
         <h2>{{ movie.title }}</h2>
         <h4>{{ movie.actors }}</h4>
         <h4>{{ movie.relesed }}</h4>

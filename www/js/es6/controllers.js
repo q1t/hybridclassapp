@@ -61,15 +61,16 @@ angular.module('starter.controllers', [])
     $state.go('lists')
   }
   $scope.newList = function(list) {
-    console.log(list)
+    if (list || list.length > 1) {
       api.AddList(list, $localstorage.get('token', '')) 
-                  .then(r => {
-                    $state.go('lists')
-                  })
-                  .catch(e => {
-                    console.log(e)
-                  })
-      }
+        .then(r => {
+          $state.go('lists')
+        })
+        .catch(e => {
+          console.log(e)
+        })
+    }
+  }
 })
 .controller('ListsCtrl', function($scope, $state, $window, $ionicPopup, $localstorage, User) {
    let confirmPopup = (title, template) => { 
